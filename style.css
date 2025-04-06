@@ -414,6 +414,12 @@ hr {
 		top: 2px;
 		left: 30px;
 	}
+
+	#main-video{
+		width:100%;
+		height:auto;
+	}
+	
 	.nav-show{
 		opacity: 1;
 	}	 
