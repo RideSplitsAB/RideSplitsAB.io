@@ -211,7 +211,7 @@ a.nav-link{
 
 .card .work-content{
 	text-align: center;
-	padding: 10px 5px;
+	padding: 5px 5px;
 	font-size: 1rem;
 	/*(color: var(--main-fonts-color); */
 	font-family: var(--main-font-family);
