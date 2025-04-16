@@ -419,6 +419,10 @@ hr {
 		width:150px;
 		height:100px;
 	}
+	#app-img{
+		width:250px;
+		height:150px;
+	}
 	
 	.nav-show{
 		opacity: 1;
