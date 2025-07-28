@@ -1,181 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>Ride Splits</title>
-	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-	<meta name="description" content="RideSplits, a smart carpooling app that connects people going the same way making commuting more affordable, sustainable, and social.">
-	<link rel="canonical" href="https://ridesplits.com">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-	<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script src="script.js"></script>
-	<meta http-equiv="Content-Security-Policy"
-	        content="default-src 'self';
-	                 script-src 'self' https://*.github.io https://github.com https://ajax.googleapis.com https://www.youtube-nocookie.com;
-	                 connect-src 'self';
-	                 style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://use.fontawesome.com https://*.github.io https://github.com;
-	                 font-src 'self' https://fonts.gstatic.com https://use.fontawesome.com;
-	                 frame-src https://*.github.io https://www.github.com https://www.youtube.com https://www.youtube-nocookie.com;
-			 img-src 'self' https:;
-	                 object-src 'none';
-	                 base-uri 'self';
-	                 form-action 'self';
-	                 upgrade-insecure-requests;">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ride With - RideSplits</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.7/tailwind.min.css"
+    integrity="sha512-y6ZMKFUQrn+UUEVoqYe8ApScqbjuhjqzTuwUMEGMDuhS2niI8KA3vhH2LenreqJXQS+iIXVTRL2iaNfJbDNA1Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./images/favicon.ico" />
+  <link rel="preload" href="style.css" as="style" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-    <body>
-	  
-        <div class="container">
-	  
-		<!--────────────────Header───────────────-->
-			<header>
-				<a class="logo" href="#home">
-					<img src="images/RideSplitsLogo.png" alt="ridesplits logo" />
-				</a>
-				<nav>
-					<ul class="nav-bar">
-						<li><a class="nav-link active" href="#home">Home</a></li>
-						<li><a class="nav-link" href="#about">About</a></li>
-						<li><a class="nav-link" href="#app">App</a></li>
-						<li><a class="nav-link" href="#team">Team</a></li>
-						<li><a class="nav-link" href="#social">Socials</a></li>
-					</ul>
-					<!--Mainly for mobile-->
-					<div class="hamburger">
-						<div class="line1"></div>
-						<div class="line2"></div>
-						<div class="line3"></div>
-					</div>
-				</nav>
-			</header>
-			<main>
-				<!--─────────────────Home────────────────-->
-				<div id="home">
-					<section class="intro">
-						<h1>Ride Splits</h1>
-						<p>By WeilAI</p>
-						<iframe id="main-video" width="500" height="280" title="Ridesplits promotional video explaining the benefits of using Ridesplits to save money while commuting" src="https://www.youtube-nocookie.com/embed/lGcBsv4K91I" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-						<!--────social media links─────-->
+<body>
+  <header class="flex flex-row justify-center">
+    <div class='navbar page-wide-section'>
+      <a href="https://www.ridesplits.com" class="rs-logo">
+        <img src='./images/android-chrome-192x192.png' class='rs-business-logo'>
+      </a>
+      <div class="searchbox">
+        <svg width='16' height='16' style='fill: #27AE60' viewBox='0 0 16 16'>
+          <path d="M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+        </svg>
+        <input type='text' required='required' placeholder='' class='nav-input-style'>
+        <label class='nav-location-label'>
+          <span>Where are you going?</span>
+        </label>
+        <svg width='16' height='16' fill=#27AE60 viewBox='0 0 16 16'>
+          <path
+            d="M7.298 10.313a3.172 3.172 0 0 1-2.776-3.514 3.145 3.145 0 0 1 1.182-2.116 3.14 3.14 0 0 1 2.332-.66 3.17 3.17 0 0 1 2.777 3.515A3.15 3.15 0 0 1 9.63 9.653a3.151 3.151 0 0 1-2.332.66zm5.98 2.433-1.733-2.192A5.122 5.122 0 0 0 12.8 7.771V7.77a5.173 5.173 0 0 0-4.53-5.733 5.111 5.111 0 0 0-3.806 1.077 5.131 5.131 0 0 0-1.929 3.452 5.174 5.174 0 0 0 5.137 5.768 5.1 5.1 0 0 0 2.287-.56l1.747 2.212 1.571-1.24z">
+          </path>
+        </svg>
+      </div>
+      <ul class='navlinks-header'>
+        <li><a href="https://ride-splits.adalo.com/ridesplits">DRIVER</a></li>
+        <li><a href="https://ride-splits.adalo.com/ridesplits">RIDER</a></li>
+        <li><a href="https://www.ridesplits.com/business">BUSINESS</a></li>
+        <li><a href="https://www.ridesplits.com/login">LOG IN</a></li>
+        <li><a href="https://www.ridesplits.com/signup">SIGN UP</a></li>
+      </ul>
+    </div>
+    <div style='height: 40px;'></div>
+  </header>
 
-						<div class="social-media">
-							<a href="https://www.linkedin.com/company/ride-splits/" target="_blank"><i title="Ridesplits linkedin icon link" class='fab fa-linkedin-in'></i></a>
-							<a href="https://www.youtube.com/channel/UCM7FNICm0z9KN8mFeXAyyPQ" target="_blank"><i title="Ridesplits youtube channel icon link" class="fab fa-youtube"></i></a>
-							<a href="https://instagram.com/ride_splits" target="_blank"><i title="Ridesplits instagram profile icon link" class='fab fa-instagram'></i></a>
-							<a id="tiktok" href="https://www.tiktok.com/@ride_splits?_t=ZT-8vZgaa2KAvr&_r=1" target="_blank"><img width="28" height="32" src="images/tiktokIcon.png" alt="ridesplit tiktok channel link"/></a>
-						</div>
-					</section>
-				</div>
+  <main>
+    <section class='hero-section'>
+      <div style='width: 50%; padding-bottom: 115px;'>
+        <div style='height: 40px'></div>
+        <h3 class='ready-when-you-are'>Ready when you are</h3>
+        <div style='height: 16px'></div>
+        <h1 class='hop-in'>Hop in. Crack a window. Let's get back out there.</h1>
+        <a href='https://ride-splits.adalo.com/ridesplits' class='apply-to-drive'>Apply to drive</a>
+        <a href='https://ride-splits.adalo.com/ridesplits'
+          class='sign-up-to-ride'>
+          Sign up to ride</a>
+      </div>
+      <div style='width: 8.3333%; padding-right: 16px'></div>
+      <div style='width: 41.6667%'>
+        <div style='position: relative; height: 100%; width: 100%'>
+          <img src='./images/home_hero_1_tile.jpg' class='hero-img-1'>
+          <img src='./images/driver.png' class='driver-wearing-mask'>
+        </div>
+      </div>
+    </section>
 
+    <section class='driver-section'>
+      <div class='driver-section-container'>
+        <div style='width: 8.3333%; order: 1; padding-right: 16px'></div>
+        <div style='width: 33.3333%; order: 2'>
+          <img src='./images/driver_section_2x.jpg' class='driver-2'>
+        </div>
+        <div style='width: 8.3333%; order: 3; padding-right: 16px'></div>
+        <div style='width: 41.6667%; order: 4; padding-right: 16px'>
+          <div class='driver-section-info'>
+            <h3 class='drive-with-rs'>Drive With RideSplits</h3>
+            <h1 class='set-your-own-hours'>Set your own hours. Earn on your own terms.</h1>
+            <p class='reason-to-drive'>Maybe you’re saving up for school. Or keeping flexible hours to spend more time
+              with your family. It’s a
+              great time to get in the driver’s seat, connect with your community, and earn a little extra cash. Plus,
+              you can tell people you’ve got the best boss in town: you.</p>
+            <div style='display: flex; flex-direction: row'>
+              <span style='display: inline-block; margin-right: 8px'>
+                <svg style='width: 24px; height: 24px'>
+                  <path
+                    d="M3 19v-2h18v2H3zm0-4V5h18v10H3zm16-3.96V8.99c-.52-.03-1.02-.25-1.36-.6a2.09 2.09 0 0 1-.6-1.39h-2.41c.84.72 1.37 1.81 1.37 3s-.53 2.28-1.36 3h2.42c.01-.53.22-1.04.57-1.39.34-.34.84-.56 1.37-.57zM9.36 13v-.03A3.92 3.92 0 0 1 8 10c0-1.19.53-2.28 1.37-3H6.91A1.939 1.939 0 0 1 5 8.89v2.26c.99.02 1.8.86 1.81 1.85h2.55z">
+                  </path>
+                </svg>
+              </span>
+              <div>
+                <strong>Reliable earnings</strong>
+                <p style='margin-top: 6px; margin-bottom: 24px;'>Make money, keep your tips, and use in-app tools to
+                  help maximize your
+                  earnings.</p>
+              </div>
+            </div>
+            <div style='display: flex; flex-direction: row;'>
+              <span style='display: inline-block; margin-right: 8px'>
+                <svg style='width: 24px; height: 24px'>
+                  <path
+                    d="M19.862 10.519a7.946 7.946 0 0 0-.665-2.017l1.8-.874c.387.8.668 1.649.832 2.523l-1.967.368zm-1.216-2.975a8.01 8.01 0 0 0-2.006-2.062l1.162-1.628a10.013 10.013 0 0 1 2.503 2.574l-1.66 1.116zm-3.04-2.688A7.922 7.922 0 0 0 12 4l-.26.003-.062-1.999L12 2c1.585 0 3.103.36 4.508 1.072l-.902 1.784zM12 22C6.486 22 2 17.514 2 12c0-4.808 3.425-8.941 8.144-9.828l.369 1.966A7.999 7.999 0 0 0 4 12c0 4.411 3.589 8 8 8s8-3.589 8-8h2c0 5.514-4.486 10-10 10zm4-8h-5V8h2v4h3v2z">
+                  </path>
+                </svg>
+              </span>
+              <div>
+                <strong>A flexible schedule</strong>
+                <p style='margin-top: 6px; margin-bottom: 24px;'>Be your own boss and drive whenever it works for you.
+                </p>
+              </div>
+            </div>
+            <div style='display: flex; flex-direction: row'>
+              <span style='display: inline-block; margin-right: 8px'>
+                <svg style='width: 24px; height: 24px'>
+                  <path
+                    d="M8.11 20.99c-.283-.105.059-.579.169-.746.407-.614.492-.72 1.28-2.21.72-1.365.488-3.328-.274-4.745-1.299-2.416-1.26-2.863.755-4.829.852-.832 4.959-4.824 5.363-5.219.201-.197.388-.274.501-.229 0 0 .259.035-.073.63-.307.548-.51.778-1.254 2.131-.743 1.352-.467 3.33.306 4.742 1.315 2.408 1.27 2.847-.722 4.834a511.714 511.714 0 0 1-4.765 4.645c-.186.178-1.088 1.108-1.287.997">
+                  </path>
+                </svg>
+              </span>
+              <div>
+                <strong>Get paid promptly</strong>
+                <p style='margin-top: 6px'>Cash out your earnings whenever you want with Express Pay and RideSplits Direct.
+                </p>
+              </div>
+            </div>
+            <div style='display: flex; flex-direction: row; margin-top: 40px'>
+              <a href='https://ride-splits.adalo.com/ridesplits' class='apply-to-drive'>Apply to drive</a>
+              <a href='https://ridesplits.com' class='driver-pay-container'>
+                <strong style='padding-right: 8px'>How driver pay works</strong>
+                <svg width='16' height='16' viewBox='0 0 16 16'>
+                  <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<!----About-->
+    <section class='driver-review-section'>
+      <div class='driver-review-container'>
+        <div class='driver-review-individual'>
+          <img src='./images/mary_driver.jpg' class='driver-img-mary-christine'>
+          <p class='driver-review-mary-christine'>
+            “My motto is very simple. It doesn't cost you a penny to be nice and kind, but it will cost you everything
+            if
+            you're not. If I'm free and somebody needs my help, I'll be the first one to jump in, in a heartbeat.”
+          </p>
+          <div class='driver-name-mary-christine'>— Mary</div>
+          <div class='driver-yoe-mary-christine'><em>Driving with RideSplits since 2019</em></div>
+        </div>
+        <div class='driver-review-individual'>
+          <img src='./images/harold_driver.jpg' class='driver-img-harold'>
+          <p class='driver-review-harold'>“As a student, it’s hard to complete my class work around a schedule. I
+            started
+            driving more with RideSplits and
+            realized it was the perfect opportunity to make money and work on my own time! Driving with RS gives me
+            freedom in my
+            schedule to focus on school, which is my main priority.”
+          </p>
+          <div class='driver-name-harold'>— Harold</div>
+          <div class='driver-yoe-harold'><em>Driving with RideSplits since 2020</em></div>
+        </div>
+        <div class='driver-review-individual'>
+          <img src='./images/christine_driver.jpg' class='driver-img-mary-christine'>
+          <p class='driver-review-mary-christine'>“I'm a disabled Marine Corps veteran, and because of my disability,
+            I'm no longer able to work in a structured environment. The few hours a week that I drive connects me to my
+            community and gives me extra money to help make ends meet.”</p>
+          <div class='driver-name-mary-christine'>— Christine</div>
+          <div class='driver-yoe-mary-christine'><em>Driving with RideSplits since 2016</em></div>
+        </div>
+      </div>
+      <div class='driver-review-nav'>
+        <div class='driver-review-nav-arrow'>
+          <svg style='width: 24px; height: 24px'>
+            <path d="M10.155 10.46h9.798v3h-9.798l2.95 3.54-2.305 1.921L5 11.96 10.8 5l2.305 1.921z"></path>
+          </svg>
+        </div>
+        <span class='driver-review-nav-current'></span>
+        <span class='driver-review-nav-other'></span>
+        <span class='driver-review-nav-other'></span>
+        <span class='driver-review-nav-other'></span>
+        <div class='driver-review-nav-arrow'>
+          <svg style='width: 24px; height: 24px'>
+            <path d="M14.797 13.46H4.999v-3h9.798l-2.95-3.54 2.305-1.921 5.8 6.961-5.8 6.96-2.305-1.921z"></path>
+          </svg>
+        </div>
+      </div>
+    </section>
 
-				<div id="about">
-					<h3>About</h3>
-					<img id="app-img" width="600" height="400" src="images/rsArt.jpg" alt="ridesplit logo car graphics">
-					<p>
-						Getting around shouldn’t be expensive or inconvenient. <br />That’s why we created RideSplits, a smart carpooling app that connects people going the same way making commuting more affordable, sustainable, and social. <br>Whether you're a student looking to save on gas, a commuter wanting to split costs, or someone who enjoys meeting new people while traveling, RideSplits makes it easy.
-					</p>
-					<a href="https://gofund.me/27c4f2e3" target="_blank" <img width="150" height="100" src="/images/goFundMe.png" alt="ridesplits gofundme page link"><a/>
-				</div>
+    <section class='ride-section1'>
+      <div style='height: 80px'></div>
+      <div class='ride-section1-container'>
+        <div class='ride-section1-part1'></div>
+        <div class='ride-section1-part2'>
+          <span class='ride-with-rs'>ride with RideSplits</span>
+          <h2 class='ready-set-go'>Ready, set, go<br>in just a few quick taps.</h2>
+          <div>Whether you’re following your heart or your busy <br>schedule, we’ll get you where you need to
+            go.</div>
+          <div>
+            <div style='display: flex; flex-direction: row'>
+              <div class='get-a-reliable-ride'>
+                <svg width='16' height='16' viewBox='0 0 16 16'>
+                  <path
+                    d="M8 10v5H6V6.285c-.67 0-1.215.527-1.215 1.176V10H3.021V7.461c0-1.59 1.337-2.885 2.979-2.885h3.486c1.135 0 2.034-.575 2.498-1.114.594-.69 1.192-2.012 1.372-2.462L15 1.616c-.03.076-.758 1.89-1.662 2.94A5.014 5.014 0 0 1 11 6.059V15H9v-5H8zm2-7.5a1.501 1.501 0 1 1-3.002-.001 1.501 1.501 0 0 1 3.002 0zM1 15v-3h4v3H1z">
+                  </path>
+                </svg>
+                <button class='get-a-reliable-ride-content'>Find a reliable ride</button>
+              </div>
+            </div>
+            <div class='schedule-your-ride'>
+              <svg width='16' height='16' viewBox='0 0 16 16'>
+                <path d="M12 3h2v11H2V3h2V2h2v1h4V2h2v1zm-8.5 9.5h9V6h-9v6.5zM9 11h2V9H9v2z"></path>
+              </svg>
+              <button class='know-that-your-driver-content'>Schedule your ride in advance</button>
+            </div>
+            <div style='height: 40px'></div>
+            <div class='get-a-ride-button'>
+              <a href='https://ride-splits.adalo.com/ridesplits'>Get a ride</a>
+            </div>
+            <div style='height: 40px'></div>
+          </div>
+        </div>
+        <div class='ride-section1-part3'></div>
+        <div class='ride-section1-part4'>
+          <img src='./images/app.png'>
+        </div>
+      </div>
+      <div style='height: 48px'></div>
+    </section>
 
-				<!--──────────────Contact────────────────-->
-				<div id="app">
-					<h3>App</h3>
-					<a href="https://ride-splits.adalo.com/ridesplits" target="_blank"> <img id="app-img" width="600" height="400" src="/images/app.png" alt="Ridesplits Adalo qr code and app home screeen preview"> </a>
-				</div>
+    <section class='ride-section2'>
+      <div class='ride-section2-container'>
+        <div class='ride-section2-part2'>
+              <div class='ride-options-body'>
+                <span>Efficient  & Reliable</span>
+              </div>
+            <button class='ride-options-card'>
+              <span class='ride-options-header'>Shared rides</span>
+              <img src='./images/rsArt.jpg' class='ride-options-image'>
+              <div class='ride-options-body'>
+                <svg width='16' height='16' viewBox='0 0 16 16' style='fill: grey'>
+                  <path
+                    d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16zM6.063 5.565c0-.96 1.405-1.063 2.01-1.063.893 0 1.88.43 2.2.959l.14.232 2.102-.972-.137-.28c-.724-1.48-2.002-1.933-2.997-2.117V1H7v1.315c-2.21.009-3.453 1.538-3.453 3.25 0 2.825 2.641 3.12 4.388 3.315 1.544.183 2.292.564 2.292 1.168 0 1.19-1.693 1.282-2.213 1.282-1.169 0-2.294-.577-2.616-1.343l-.118-.28-2.28.965.12.28c.63 1.476 2.16 2.573 3.88 2.643V15h2.38v-1.475c1.762-.224 3.451-1.356 3.451-3.477 0-2.93-2.806-3.275-4.664-3.504-1.425-.17-2.104-.36-2.104-.98z">
+                  </path>
+                </svg>
+                <span>Budget-friendly</span>
+              </div>
+              <div class='ride-options-body'>
+                <svg width='16' height='16' viewBox='0 0 16 16' style='fill: grey'>
+                  <path
+                    d="M12.906 11.828C11.118 13.688 8.929 14 7.65 14c-.116 0-.231 0-.332-.008.178-.216.355-.433.524-.65.07-.088.131-.168.193-.256.254-.32.501-.657.732-.986.162-.224.324-.449.478-.673.894-1.307 1.703-2.67 2.343-4.096-1.002 1.178-2.12 2.212-3.283 3.158-.231.192-.47.377-.71.553-.307.249-.623.481-.94.697-.046.04-.1.08-.146.113-.239.168-.477.336-.716.497a.182.182 0 0 1-.07.048 9.084 9.084 0 0 1-.023-.642c0-1.7.688-3.402 1.756-4.68.137-.163.279-.33.425-.482 2.651-2.757 6.188-2.116 6.342-2.092l.586.12.108.61c.03.152.647 3.831-2.011 6.597zM6.779 5.222c-.208.217-.416.457-.632.714-.208.256-.408.529-.609.826-.038.064-.077.12-.115.184-.301-.136-.632-.393-.91-.713a6.98 6.98 0 0 1-1.04-1.58c.008.658.085 1.339.277 2.02.17.562.416 1.17.925 1.7a8.599 8.599 0 0 0-.67 2.693c-.887-.537-1.904-1.41-2.52-2.862-1.241-2.941.285-5.563.346-5.675L2.147 2l.586.112c.116.024 2.713.57 4.046 3.11z">
+                  </path>
+                </svg>
+                <span>Eco-friendly</span>
+              </div>
+            </button>
+          </div>
+          <p class='availability'>*Availability of rides varies by region and time.</p>
+        </div>
+    </section>
 
-				<!--───────────────Team───────────────-->
-				<div id="team">
-					<h3>Ridesplits Team</h3>
-					<p>A diverse Team dedicated into serving CSUSB students</p>
-					<div class="work-box">
-						<div class="work">
-							<!--───────────────card───────────────-->
-							<div class="card">
-								<img class="work-img" src="images/Ahmed3.jpeg" alt="Image of ridesplits founder Ahmed Burgos">
-								<a href="https://www.linkedin.com/in/ahmed-sahlem-burgos-nagi-77b63b282/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Ahmed Burgos</div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/Pedro Gonzalez.jpg" alt="Image of Pedro Gonzalez, ridesplits developer">
-								<a href="https://www.linkedin.com/in/pedro-gonzalez-csusb/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Pedro Gonzalez</div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/gaby.jpg" alt="Image of Gabriel Monjaras, ridesplits marketing">
-								<a href="https://www.linkedin.com/in/gabriela-monjaras-4aaa81197/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Gabriela Monjaras</div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/AlexisL.jpg" alt="Image of Alexis Luevanos aka el guapo, ridesplits developer">
-								<a href="https://www.linkedin.com/in/alexisluevanos11/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Alexis Luevanos</div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/Axel.png" alt="Image of Axel Perez, ridesplits developer">
-								<a href="https://www.linkedin.com" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Axel Perez<br></div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/Solomon1.jpg" alt="Image of Solomon Smith ridesplits developer">
-								<a href="https://www.linkedin.com/in/solomonsmithdev/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Solomon Smith</div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/Jacob.jpg" alt="Image of Jacob Adams ridesplits developer">
-								<a href="https://www.linkedin.com/in/jacob-s-adams/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Jacob Adams</div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/Mazin.jpg" alt="Image of Mazin Esmail, ridesplits developer">
-								<a href="https://www.linkedin.com/in/mazin-e/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Mazin Esmail</div>
-								</a>
-							</div>
-							<div class="card">
-								<img class="work-img" src="images/Nadir.jpg" alt="Image of Nadir Esmail, ridesplits developer">
-								<a href="https://www.linkedin.com/in/nadiresmail/" target="_blank">
-									<!--Link to project-->
-									<div class="work-content">Nadir Esmail</div>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+    <section class='ride-section3'>
+      <div class='ride-section3-container'>
+        <div style='margin-left: 7.333%'></div>
+        <h2 class='ready-to-roll'>Ready to roll?<br>Get a RideSplits estimate.</h2>
+        <div class='ride-section3-searchbox-container '>
+          <div class='ride-section3-searchbox'>
+            <svg width='16' height='16' class='search-dot-2' viewBox='0 0 16 16'>
+              <path d="M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+            </svg>
+            <input type='text' placeholder="" required='required' class='input-style'>
+            <label class='location-label'>
+              <span>Enter pick-up location*</span>
+            </label>
+          </div>
+        </div>
+        <div class='ride-section3-searchbox-container '>
+          <div class='ride-section3-searchbox'>
+            <svg width='16' height='16' class='search-dot-2' style='fill: #27AE60' viewBox='0 0 16 16'>
+              <path d="M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12zm0-4a2 2 0 1 0 0-4 2 2 0 0 0 0 4z">
+              </path>
+            </svg>
+            <input type='text' placeholder="" required="required" class='input-style'>
+            <label class='location-label'>
+              <span>Enter drop-off location*</span>
+            </label>
+          </div>
+        </div>
+        <button class='ride-section3-get-estimate'>Get estimate</button>
+      </div>
+    </section>
 
-				<div id="social">
-					<!--────social media links─────-->
-					<h3>Socials</h3>
-					<div class="social-media">
-						<a href="https://www.linkedin.com/company/ride-splits/" target="_blank"><i title="ridesplits linkedin icon link" class='fab fa-linkedin-in'></i></a>
-						<a href="https://www.youtube.com/channel/UCM7FNICm0z9KN8mFeXAyyPQ" target="_blank"><i title="ridesplits youtube channel icon link" class="fab fa-youtube"></i></a>
-						<a href="https://instagram.com/ride_splits" target="_blank"><i title="ridesplits instagram profile icon link" class='fab fa-instagram'></i></a>
-						<a id="tiktok" href="https://www.tiktok.com/@ride_splits?_t=ZT-8vZgaa2KAvr&_r=1" target="_blank"><img width="28" height="32" src="images/tiktokIcon.png" alt="ridesplit tiktok channel link"/></a>
-					</div>
-				</div>
+    <section class='safety-first-container'>
+      <div class='safety-first-section1'></div>
+      <div class='safety-first-section2'>
+        <span class='safety-first-header'>SAFETY FIRST</span>
+        <h2 class='how-to-show'>How to show up like a best stranger</h2>
+        <p>Every ride should feel safe and comfy to everyone. A few simple ground rules can help make that happen
+          for all drivers and riders. Read up, mask up, and crack a window to enjoy the breeze in your hair.</p>
+        <div class='buttons-container'>
+          <div class='learn-about-safety'>
+            <a href='https://www.ridesplits.com/safety'>Learn about safety</a>
+          </div>
+          <a href='https://www.ridesplits.com/safety/community-guidelines' class='community-guidlines'>Community guidlines
+            <svg width='16' height='16' viewBox='0 0 16 16' style='margin-left: 8px'>
+              <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z"></path>
+            </svg></a>
+        </div>
+      </div>
+      <div class=safety-first-section3></div>
+      <div class=safety-first-section4>
+        <img src='./images/Image_for_Homepage_Safety_Module.webp'>
+      </div>
+    </section>
 
-			</main>
-	  <footer class="copyright">© 2025 
-		  <a href="" target="_blank"> Ride Splits.</a>
-     </footer>
-  </div>
-  </body>
+    
+
+    <section class='rs-business-container'>
+      <img src='./images/android-chrome-192x192.png' class='rs-business-logo'>
+      <div class='slider'>
+        <div class='we-help-you'>We help move
+            <div class='text-box'>
+                <span>commuters</span>
+                <span>students</span>
+                <span>community</span>
+            </div>
+        </div>
+      </div>
+      <p>Affordable transportation solutions, effortless payments, and getting all the right people to all the right
+        places. So you can get work done.</p>
+      <a href='https://www.ridesplits.com/business' class='learn-about-rs-business'>Learn about RideSplits Business
+        <svg width='16' height='16' viewBox='0 0 16 16' style='margin-left: 8px'>
+          <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z"></path>
+        </svg>
+      </a>
+    </section>
+  </main>
+
+  <footer class='footer'>
+    <div class='sitemap page-section'>
+      <ul class='sitemap-li'>
+        <li style='font-size: 16px; font-weight: 700; line-height: 20px; padding-bottom: 20px'>DRIVER</li>
+        <li>Become a Driver</li>
+        <li>Earnings</li>
+        <li>Cities</li>
+        <li>Help</li>
+        <li>Safety</li>
+        <li>Application Requirements</li>
+        <li>Express Drive</li>
+        <li>Bonus</li>
+        <li>RideSplits Rewards</li>
+        <li>Driving Opportunities</li>
+        <li>Insurance</li>
+        <li>Hub</li>
+      </ul>
+      <ul class='sitemap-li'>
+        <li style='font-size: 16px; font-weight: 700; line-height: 20px; padding-bottom: 20px'>RIDER</li>
+        <li>Sign up to ride</li>
+        <li>Fare Estimate</li>
+        <li>Cities</li>
+        <li>Help</li>
+        <li>Safety</li>
+        <li>Business profile</li>
+        <li>Rewards</li>
+        <li>Events</li>
+        <li>Airports</li>
+        <li>Gift Cards</li>
+        <li>Donate</li>
+        <li>Blog</li>
+      </ul>
+      <ul class='sitemap-li'>
+        <li style='font-size: 16px; font-weight: 700; line-height: 20px; padding-bottom: 20px'>RS</li>
+        <li>Careers</li>
+        <li>RideSplits</li>
+        <li>Business</li>
+        <li>RideSplits Media</li>
+        <li>Developers</li>
+        <li>Press</li>
+        <li>Investor Relations</li>
+      </ul>
+      <ul class='list-style navlinks-footer-links'>
+        <li><a href="https://ride-splits.adalo.com/ridesplits">RideSplits App</a></li>
+      </ul>
+    </div>
+    <div class='footnote page-section'>
+        <ul class='list-style'>
+            <li style='text-decoration: underline'><a href="https://www.ridesplits.com/terms">Terms</a></li>
+            <li style='text-decoration: underline'><a href="https://www.ridesplits.com/privacy">Privacy</a></li>
+            <li>&copy; 2025 RideSplits, Inc.</li>
+            <li class='navlinks-footer'><a href="https://www.linkedin.com/company/ride-splits/" class='fa fa-linkedin'></a></li>
+            <li class='navlinks-footer'><a href="https://www.instagram.com/ride_splits/" class='fa fa-instagram'></a></li>
+            <li class='navlinks-footer'><a href="https://www.youtube.com/channel/UCM7FNICm0z9KN8mFeXAyyPQ" class='fa fa-youtube'></a></li>
+        </ul>
+    </div>
+  </footer>
+</body>
+
 </html>
