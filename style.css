@@ -893,7 +893,13 @@ input:focus ~ .location-label {
     opacity: 0;
   }
 }
+/*_________________________________APP Page_________________________________*/
 
+.ridesplits-app-download-img {
+  display: flex;
+  justify-content: center;
+
+}
 /*_________________________________FOOTER_________________________________*/
 
 .sitemap-li {
