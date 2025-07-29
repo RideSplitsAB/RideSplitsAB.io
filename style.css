@@ -796,8 +796,8 @@ input:focus ~ .location-label {
 
 .rs-business-logo {
   margin: 0px auto;
-  max-width: 150px;
-  height: auto;
+  height: 100%;
+  max-width: auto;
 }
 
 .we-help-you {
