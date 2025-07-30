@@ -924,6 +924,76 @@ input:focus ~ .location-label {
 	color: var(--main-decor-color);
 	text-shadow: 0 0 50px var(--main-decor-color);
 }
+
+/*_________________________________Team Page_________________________________*/
+
+#team{
+	margin-top:100px;
+    height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+	text-align:center;
+	color: var(--main-fonts-color);
+}
+#team h3{
+    padding-top: 70px;
+}
+#team p{
+	font-family: var(--main-font-family);
+	font-size:1.2rem;
+	padding: 10px;
+}
+
+.work{
+	display: flex; 
+	flex: 1;
+    flex-wrap: wrap;
+    justify-content:center;
+	align-items: center;
+	padding: 20px;
+}
+
+.card{
+	display: flex;
+	flex-direction: column;
+	margin: 30px;
+	width: 200px;
+	height:250px;
+	border-radius:30px;
+    background:var(--main-decor-color);
+}
+
+.card img{
+	width: 100%;
+	height:90%;
+	border-radius:10px 10px 0px 0px;
+}
+
+.card .work-content{
+	text-align: center;
+	padding: 5px 5px;
+	font-size: 1rem;
+	/*(color: var(--main-fonts-color); */
+	font-family: var(--main-font-family);
+	cursor: pointer;
+}
+
+.card a{
+	text-decoration: none;
+}
+
+.card .work-content:hover{
+    color:#202020;
+}
+
+	.card:hover {
+		box-shadow: 0 0 1.5rem gray;
+		width: 240px;
+		height: 270px;
+	}
+
 /*_________________________________FOOTER_________________________________*/
 
 .sitemap-li {
