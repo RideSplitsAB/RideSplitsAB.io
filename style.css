@@ -900,6 +900,31 @@ input:focus ~ .location-label {
   justify-content: center;
 
 }
+/*_________________________________SOCIALS Page_________________________________*/
+
+.social-media-icons {
+	padding: 10px;
+	display: flex;
+	/* position: center; */
+	justify-content: center;
+}
+
+.social-media-icons a {
+	margin: 10px;
+	font-size: 2rem;
+	text-align: center;
+	display: inline-block;
+	color: var(--main-fonts-color);
+}
+
+.social-media-icons a i{
+	cursor: pointer;
+}
+
+.social-media  a:hover {
+	color: var(--main-decor-color);
+	text-shadow: 0 0 50px var(--main-decor-color);
+}
 /*_________________________________FOOTER_________________________________*/
 
 .sitemap-li {
