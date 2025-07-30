@@ -905,7 +905,6 @@ input:focus ~ .location-label {
 .social-media-icons {
 	padding: 10px;
 	display: flex;
-	/* position: center; */
 	justify-content: center;
 }
 
@@ -1004,14 +1003,4 @@ input:focus ~ .location-label {
   padding-top: 20px;
 }
 
-.fa-twitter {
-  color: white;
-}
 
-.fa-facebook {
-  color: white;
-}
-
-.fa-instagram {
-  color: white;
-}
