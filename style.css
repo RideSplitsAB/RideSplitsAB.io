@@ -990,8 +990,8 @@ input:focus ~ .location-label {
 
 	.card:hover {
 		box-shadow: 0 0 1.5rem gray;
-		width: 240px;
-		height: 270px;
+		max-width: 240px;
+		max-height: 270px;
 	}
 
 /*_________________________________FOOTER_________________________________*/
