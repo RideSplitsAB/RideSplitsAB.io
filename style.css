@@ -34,6 +34,10 @@ header {
   align-items: stretch;
 }
 
+.navbar a:hover {
+  color: #27AE60;
+	text-shadow: 0 0 50px #27AE60;}
+
 .rs-logo {
   padding-left: 24px;
   display: flex;
