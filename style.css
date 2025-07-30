@@ -920,10 +920,12 @@ input:focus ~ .location-label {
 	cursor: pointer;
 }
 
-.social-media  a:hover {
-	color: var(--main-decor-color);
-	text-shadow: 0 0 50px var(--main-decor-color);
+.social-media-icons a:hover, .navlinks-footer  a:hover {
+	color: #27AE60;
+	text-shadow: 0 0 50px #27AE60;
 }
+
+
 
 /*_________________________________Team Page_________________________________*/
 
