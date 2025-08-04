@@ -916,6 +916,9 @@ padding-right: 8px;
 padding-left: 16px;
 }
 
+.about-text {
+  margin-bottom: 24px;
+}
 /*_________________________________APP Page_________________________________*/
 
 .ridesplits-app-download-img {
