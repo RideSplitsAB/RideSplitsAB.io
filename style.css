@@ -972,7 +972,26 @@ padding-left: 16px;
 	text-shadow: 0 0 50px #27AE60;
 }
 
+.socials-section {
+  background-color: #ecf0f1;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 
+.socials-section-container {
+display: flex;
+flex-wrap: wrap;
+min-width: 320px;
+width: 100%;
+max-width: 1280px;
+margin: 0px auto;
+padding-right: 8px;
+padding-left: 16px;
+}
+
+.socials-text {
+  margin-bottom: 24px;
+}
 
 /*_________________________________Team Page_________________________________*/
 
