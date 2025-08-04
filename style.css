@@ -1043,6 +1043,27 @@ padding-left: 16px;
 		max-height: 270px;
 	}
 
+  .team-section {
+    background-color: #ecf0f1;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  
+  .team-section-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0px auto;
+  padding-right: 8px;
+  padding-left: 16px;
+  }
+  
+  .team-text {
+    margin-bottom: 24px;
+  }
+
 /*_________________________________FOOTER_________________________________*/
 
 .sitemap-li {
