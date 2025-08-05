@@ -1030,6 +1030,16 @@ padding-left: 16px;
 	padding: 10px;
 }
 
+.team-header {
+  font-size: 50px;
+  margin-bottom: 24px;
+}
+
+.team-text {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
 .work{
 	display: flex; 
 	flex: 1;
