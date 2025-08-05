@@ -619,17 +619,20 @@ a.sign-up-to-ride {
 .ride-section3 {
     background-color: #27AE60;
     margin-bottom: 80px;
+  
 }
 
 .ride-section3-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   min-width: 320px;
   width: 100%;
   max-width: 1280px;
   margin: 0px auto;
   padding: 36px 8px 36px 24px;
+  text-align: center;
 }
 
 .ready-to-roll {
