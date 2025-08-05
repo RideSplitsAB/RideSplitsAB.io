@@ -1135,6 +1135,10 @@ padding-left: 16px;
   margin-bottom: 8px;
 }
 
+.footer-ride-splits-link a:hover{
+  text-decoration: underline;
+}
+
 .sitemap {
   display: flex;
   justify-content: space-between;
