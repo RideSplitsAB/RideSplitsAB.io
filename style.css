@@ -1005,9 +1005,16 @@ padding-right: 8px;
 padding-left: 16px;
 }
 
-.socials-text {
+.socials-header {
+  font-size: 50px;
   margin-bottom: 24px;
 }
+
+.socials-text {
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
 
 /*_________________________________Team Page_________________________________*/
 
