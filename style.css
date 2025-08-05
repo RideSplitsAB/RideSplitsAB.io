@@ -961,7 +961,11 @@ padding-left: 16px;
 .ridesplits-app-download-img {
   display: flex;
   justify-content: center;
-
+}
+.ridesplits-app-download-img img{
+  display: block;
+  border-radius: 10px;
+  margin-bottom: 50px;
 }
 /*_________________________________SOCIALS Page_________________________________*/
 
