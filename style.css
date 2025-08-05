@@ -948,8 +948,14 @@ padding-right: 8px;
 padding-left: 16px;
 }
 
-.app-text {
+.app-header {
+  font-size: 50px;
   margin-bottom: 24px;
+}
+
+.app-text {
+  font-size: 25px;
+  margin-bottom: 25px;
 }
 
 .ridesplits-app-download-img {
