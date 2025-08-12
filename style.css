@@ -245,6 +245,22 @@ a.sign-up-to-ride {
   margin-left: 24px;
 }
 
+.how-drive-pay-works-button:hover {
+  text-decoration: underline;
+}
+
+a.get-the-app-driver-section {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 15px;
+  color: #ffffff;
+  background-color: #27AE60;
+  border-radius: 56px;
+  box-sizing: border-box;
+  padding: 1em;
+  cursor: pointer;
+}
+
 /*_________________________________DRIVER REVIEW SECTION_________________________________*/
 
 .driver-review-section {
