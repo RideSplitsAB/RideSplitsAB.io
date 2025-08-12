@@ -669,7 +669,6 @@ a.get-the-app-driver-section {
 }
 
 .ready-to-roll {
-  color: white;
   font-size: 24px;
   font-weight: 700;
   margin-right: 8px;
@@ -721,7 +720,8 @@ input:focus ~ .location-label {
 }
 
 .ride-section3-get-estimate {
-  background-color: white;
+  background-color:  #27AE60;
+  color: white;
   font-weight: 700;
   border-radius: 56px;
   padding: 12px 22px;
