@@ -181,6 +181,19 @@ a.sign-up-to-ride {
   left: -24%;
 }
 
+.hero-business-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  margin-top: 10%;
+}
+.hero-business-button:hover {
+  text-decoration: underline;
+}
+
 /*_________________________________DRIVER SECTION_________________________________*/
 
 .driver-section {
@@ -397,9 +410,7 @@ a.get-the-app-driver-section {
 .ride-section1-container {
   display: flex;
   flex-wrap: wrap;
-  min-width: 320px;
   width: 100%;
-  max-width: 1280px;
   margin: 0px auto;
   padding-right: 8px;
   padding-left: 16px;
@@ -412,7 +423,7 @@ a.get-the-app-driver-section {
 
 .ride-section1-part2 {
   width: 41.6667%;
-  order: 3;
+  order: 2;
   text-align: left;
 }
 
@@ -422,6 +433,50 @@ a.get-the-app-driver-section {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 8px;
+}
+
+.ride-section1-part3 {
+  width: 8.3333%;
+  order: 3;
+}
+
+.ride-section1-part4 {
+  width: 33.3333%;
+  order: 4;
+}
+
+.ride-section2 {
+    background-color: #ecf0f1;
+    padding-bottom: 20px;
+}
+
+.ride-section2-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0px auto;
+  padding-right: 8px;
+  padding-left: 24px;
+}
+
+.ride-section2-part2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: 100%; 
+  margin-left: 0; 
+  margin-bottom: 20px; 
+}
+
+.ride-bike-scoot {
+  font-size: 36px;
+  line-height: 44px;
+  font-weight: 600;
 }
 
 .ready-set-go {
@@ -509,47 +564,6 @@ a.get-the-app-driver-section {
   color: white;
 }
 
-.ride-section1-part3 {
-  width: 8.3333%;
-  order: 3;
-}
-
-.ride-section1-part4 {
-  width: 33.3333%;
-  order: 4;
-}
-
-.ride-section2 {
-    background-color: #ecf0f1;
-    padding-bottom: 20px;
-}
-
-.ride-section2-container {
-  display: flex;
-  flex-direction: column;
-  min-width: 320px;
-  width: 100%;
-  max-width: 1280px;
-  margin: 0px auto;
-  padding-right: 8px;
-  padding-left: 24px;
-}
-
-.ride-section2-part2 {
-  margin-left: 8.3333%;
-  width: 83.3333%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.ride-bike-scoot {
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 600;
-}
 
 .we-got-options {
   font-size: 16px;
@@ -618,6 +632,8 @@ a.get-the-app-driver-section {
   line-height: 18px;
   font-weight: 400;
   color: grey;
+  gap: 10px;
+  margin:  10px; 
 }
 
 .ride-options-body span {
@@ -630,11 +646,12 @@ a.get-the-app-driver-section {
   font-weight: 400;
   margin-top: 50px;
   margin-bottom: 80px;
+  
 }
 
 .ride-section3 {
-    background-color: #27AE60;
     margin-bottom: 80px;
+    order: 3;
   
 }
 
@@ -837,16 +854,15 @@ input:focus ~ .location-label {
   margin-bottom: 40px;
 }
 
-.learn-about-rs-business {
+.ride-section-button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
 }
-.learn-about-rs-business:hover {
+.ride-section-button:hover {
   text-decoration: underline;
 }
 
