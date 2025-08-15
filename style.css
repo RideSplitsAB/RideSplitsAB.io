@@ -1154,41 +1154,6 @@ padding-left: 16px;
 
 /*_________________________________FOOTER_________________________________*/
 
-.sitemap-li {
-  list-style: none;
-  margin-bottom: 8px;
-  padding-bottom: 10px;
-  font-size: 15px;
-  line-height: 22px;
-  font-weight: 400;
-}
-.sitemap-li li {
-  padding-bottom: 10px;
-}
-
-.footer {
-  background: linear-gradient(
-    rgb(231, 231, 239) 0%,
-    rgb(244, 244, 250) 5%,
-    rgb(255, 255, 255) 10%
-  );
-  font-size: 12px;
-  padding: 46px 0px;
-  margin-top: 5em;
-}
-.footer-social-media-icons {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  align-content: center;
-  gap: 10px;
-}
-
-.footer-social-media-icons a {
-  text-decoration: none;
-  color: rgba(12, 11, 49, 1);
-  
-}
 .navlinks-footer-links a {
   display: inline-flex;
   justify-content: center;
@@ -1208,9 +1173,16 @@ padding-left: 16px;
   cursor: pointer;
   margin-bottom: 8px;
 }
-
-.footer-ride-splits-link a:hover{
-  text-decoration: underline;
+.sitemap-li {
+  list-style: none;
+  margin-bottom: 8px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+.sitemap-li li {
+  padding-bottom: 10px;
 }
 
 .sitemap {
@@ -1220,15 +1192,50 @@ padding-left: 16px;
   padding-right: 24px;
 }
 
+.footer {
+  background: linear-gradient(
+    rgb(231, 231, 239) 0%,
+    rgb(244, 244, 250) 5%,
+    rgb(255, 255, 255) 10%
+  );
+  font-size: 12px;
+  padding: 46px 0px;
+  margin-top: 5em;
+}
+.footer-social-media-icons {
+  display: flex;
+  list-style: none;
+  align-items: flex-start;
+  gap: 10px;
+  
+}
+
+.footer-social-media-icons a {
+  text-decoration: none;
+  color: rgba(12, 11, 49, 1);
+  
+}
+
+.footer-icons-right-group {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-ride-splits-link a:hover{
+  text-decoration: underline;
+}
+
 .footnote {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  flex-direction: row;
+ 
 }
 
 .footnote .list-style {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .footnote .list-style * + * {
@@ -1242,9 +1249,4 @@ padding-left: 16px;
   margin-right: auto;
   padding-top: 20px;
 }
-
-.footer .footnote .footer-social-media-icons {
-  margin-right: auto;
-}
-
 
