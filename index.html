@@ -336,6 +336,49 @@
       </div>
               
   </footer>
+
+  <!-- Firebase SDK -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
+    
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyDwj38kYUyZFx7oLsNeCT2VOwoD3osFhIE",
+      authDomain: "website-rs-2945b.firebaseapp.com",
+      projectId: "website-rs-2945b",
+      storageBucket: "website-rs-2945b.firebasestorage.app",
+      messagingSenderId: "338174460142",
+      appId: "1:338174460142:web:364abf059d37d66c46f3ff",
+      measurementId: "G-0WT9KW76BR"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    
+    // Make Firebase available globally for debugging
+    window.firebaseApp = app;
+    window.firebaseAnalytics = analytics;
+    
+    // Test Firebase connection
+    console.log('🔥 Firebase initialized successfully!');
+    console.log('📊 Analytics enabled:', analytics ? 'YES' : 'NO');
+    console.log('🔑 Project ID:', app.options.projectId);
+    console.log('🌐 Domain:', app.options.authDomain);
+    
+    // Test analytics (this will actually send data to Firebase)
+    try {
+      analytics.logEvent('page_view', {
+        page_title: document.title,
+        page_location: window.location.href
+      });
+      console.log('✅ Analytics event sent successfully!');
+    } catch (error) {
+      console.error('❌ Analytics error:', error);
+    }
+  </script>
 </body>
 
 </html>
