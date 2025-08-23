@@ -117,3 +117,8 @@ button:hover{
 #signUpButton:hover, #signInButton:hover {
     text-decoration:underline;
 } 
+
+#app-img{
+    width:350px;
+    height:250px;
+}

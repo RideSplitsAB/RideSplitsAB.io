@@ -10,22 +10,21 @@
 <body>
   <!-- Sign Up -->
     <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Register</h1>
+      <h1 class="form-title">Join Ride Splits</h1>
       <form method="post" action="">
+        <div id="app">
+					<a href="https://ride-splits.adalo.com/ridesplits" target="_blank"> 
+            <img id="app-img" width="600" height="400" src="/images/app.png" 
+            alt="Ridesplits Adalo qr code and app home screeen preview"> 
+          </a>
+				</div>
         <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email"  id="Remail" placeholder="email" required>
-            <label for="email">Email</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="Rpassword"  placeholder="password" required>
-            <label for="password">Password</label>
-        </div>
-       <button class="btn" id="submitSignUp" >Sign Up</button>
-       <div class="message_box"></div>
+        <div class="message_box"></div>
       </form>
+      <a href="https://ride-splits.adalo.com/ridesplits" 
+      rel="noopener noreferrer">
+      <button id="get-the-app-button">Get the app</button>
+     </a>
       <div class="links">
         <p>Already have an account?</p>
         <button id="signInButton">Sign In</button>
