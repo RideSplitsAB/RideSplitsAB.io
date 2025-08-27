@@ -13,7 +13,7 @@
       <h1 class="form-title">Join Ride Splits</h1>
       <form method="post" action="">
         <div id="app">
-					<a href="https://ride-splits.adalo.com/ridesplits" target="_blank"> 
+					<a href="javascript:void(0)" onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")' target="_blank"> 
             <img id="app-img" width="600" height="400" src="/images/app.png" 
             alt="Ridesplits Adalo qr code and app home screeen preview"> 
           </a>
@@ -21,7 +21,8 @@
         <div id="signUpMessage" class="messageDiv" style="display:none;"></div>
         <div class="message_box"></div>
       </form>
-      <a href="https://ride-splits.adalo.com/ridesplits" 
+      <a href="javascript:void(0)" 
+      onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")'
       rel="noopener noreferrer">
       <button id="get-the-app-button">Get the app</button>
      </a>
@@ -56,6 +57,7 @@
           <button id="signUpButton">Sign Up</button>
         </div>
       </div>
+      <script src="../config.js"></script>
       <script src="script.js"></script>
       <script type="module" src="register.js"></script>
       <script type="module" src="login.js"></script>

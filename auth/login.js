@@ -1,17 +1,10 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
 import {signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/12.1.0/firebase-auth.js"; 
- 
-const firebaseConfig = {
-    apiKey: "AIzaSyAbUsBSHai95VAmDsMn1Bf1RfFcPEkwStQ",
-    authDomain: "ride-splits.firebaseapp.com",
-    databaseURL: "https://ride-splits-default-rtdb.firebaseio.com",
-    projectId: "ride-splits",
-    storageBucket: "ride-splits.firebasestorage.app",
-    messagingSenderId: "493072368751",
-    appId: "1:493072368751:web:68b46104879ebea70ff99a",
-    measurementId: "G-RTDTHM32Q2"
-  };
+
+// Note: This file needs to be loaded after config.js in the HTML
+// The firebaseConfig will be available from window.RideSplitsConfig.firebaseSecond
     // Initialize Firebase
+    const firebaseConfig = window.RideSplitsConfig.firebaseSecond;
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
         
