@@ -1,0 +1,66 @@
+RideSplits - Frequently Asked Questions (FAQ)
+What should I do if no rides are currently available for my route?
+If no rides are available, you can check RideSplits communities related to your organization, school, or
+workplace. Many commuters in those groups regularly post rides, so it’s a good place to find options
+that match your route.
+Who can become a RideSplits driver and what are the requirements?
+Anyone 18+ with a valid driver’s license, insurance, and a safe vehicle can become a driver. Drivers
+must also pass a background check. RideSplits is designed primarily for commuters sharing their usual
+routes, but people offering gig rides are also welcome — under their own flag.
+How much does RideSplits charge in service fees?
+Drivers keep 70% of what they charge. Riders pay an additional 10% service fee at checkout. This
+applies to both one-time rides and recurring rides.
+What payment methods are accepted?
+RideSplits accepts credit cards, debit cards, Apple Pay, and Google Pay through Stripe. Drivers must
+set up their Stripe account before offering rides.
+When do drivers receive payout after completing a ride?
+Driver earnings accumulate throughout the week. Balances are paid out every Friday, covering rides
+completed during the past week and weekend.
+What is a RideSplits 'usual ride' subscription?
+Drivers can set up their usual commute (e.g., daily drive to work/school) and arrange weekly or monthly
+payments with recurring riders. This gives riders better pricing and guarantees their spot, while drivers
+still earn the same share (70%) and riders still pay the 10% fee if they’re on the free plan.
+How does RideSplits handle disputes or complaints?
+Disputes are handled through RideSplits’ customer service hotline and email. Our support team will
+review the situation and provide assistance.
+I’m having trouble signing in — what should I do?
+
+Try resetting your password first. If the issue continues, please contact customer service by hotline or
+email for help.
+Can I book a driver with a luxury car?
+Yes, if a driver offering rides happens to have a luxury car. However, RideSplits does not offer specific
+'luxury categories.'
+Can I charge more if I drive a V8?
+Yes. Drivers set their own prices, so if you believe your vehicle justifies higher fares, you’re free to set
+them accordingly.
+Can I book a drive to Japan?
+We’d love to say yes, but no — RideSplits can’t do that… yet. RideSplits planes soon enough? Just
+kidding (or maybe not ■). For now, we only operate on the ground.
+What about coupons or incentives?
+Yes, but they are seasonal and depend on when you signed up. Keep an eye out for promotions
+available during your period of membership.
+Can you handle multiple stops? I want to get coffee before going
+home.
+Yes, multi-stop rides are supported! Just make sure to talk with your driver beforehand so everyone is
+on the same page.
+Do you have wheelchair-accessible vehicles?
+Not yet. This is an amazing idea, and RideSplits is working on implementing this feature in the future.
+Can you pick me up in 5 minutes on the moon?
+Hmmmm… interesting concept. If you know how to make that happen, please work for us and teach us!
+For now, we’re not able to provide rides to the moon.
+Cancel my ride — oh wait, actually reschedule it.
+You can cancel rides directly in the app. If you want to reschedule, we recommend messaging your ride
+buddy first, since they may not be available at a different time. If not, you can always look for more rides
+in the app.
+
+How do I change my profile picture or personal information?
+Go to Profile → Settings → Edit Profile. Update your information, then press Save.
+Where can I view past and upcoming rides?
+Tap Start Ride, then drag the slider screen upward. You’ll see both completed and upcoming rides
+there.
+Can I pay with PayPal/Apple Pay/credit card?
+PayPal is not supported (yet). Apple Pay, Google Pay, debit, and credit cards are all accepted through
+Stripe.
+Change my preferred pickup address.
+Go to Profile → Usual Commute → Change My Usual Commute and update your address there.
+

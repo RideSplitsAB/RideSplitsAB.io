@@ -13,7 +13,7 @@
       <h1 class="form-title">Join Ride Splits</h1>
       <form method="post" action="">
         <div id="app">
-					<a href="javascript:void(0)" onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")' target="_blank"> 
+					        <a href="javascript:void(0)" onclick='window.open("{{EXTERNAL_APP_URL}}", "_blank")' target="_blank"> 
             <img id="app-img" width="600" height="400" src="/images/app.png" 
             alt="Ridesplits Adalo qr code and app home screeen preview"> 
           </a>
@@ -22,7 +22,7 @@
         <div class="message_box"></div>
       </form>
       <a href="javascript:void(0)" 
-      onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")'
+              onclick='window.open("{{EXTERNAL_APP_URL}}", "_blank")'
       rel="noopener noreferrer">
       <button id="get-the-app-button">Get the app</button>
      </a>
@@ -57,9 +57,36 @@
           <button id="signUpButton">Sign Up</button>
         </div>
       </div>
-      <script src="../config.js"></script>
+      
+      <script src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=places&loading=async"></script>
       <script src="script.js"></script>
       <script type="module" src="register.js"></script>
       <script type="module" src="login.js"></script>
+      
+      <script>
+        // Initialize Google Maps Autocomplete for header search
+        function initGoogleMapsAutocomplete() {
+          
+          
+          const searchInput = document.querySelector('.nav-input-style');
+          if (searchInput) {
+            const autocomplete = new google.maps.places.Autocomplete(searchInput, {
+              types: ['establishment', 'geocode'],
+              componentRestrictions: { country: 'us' }
+            });
+            
+            autocomplete.addListener('place_changed', function() {
+              const place = autocomplete.getPlace();
+              if (place.geometry) {
+                console.log('📍 Location selected:', place.name);
+                // You can add more functionality here later
+              }
+            });
+          }
+        }
+        
+        // Initialize when page loads
+        window.addEventListener('load', initGoogleMapsAutocomplete);
+      </script>
 </body>
 </html>

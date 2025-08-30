@@ -13,6 +13,7 @@
   <link rel="preload" href="style.css" as="style" />
   <link rel="stylesheet" href="style.css" />
   <script src="https://kit.fontawesome.com/9403438fd1.js" crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key={{GOOGLE_MAPS_API_KEY}}&libraries=places&loading=async"></script>
 </head>
 
 <body>
@@ -39,39 +40,71 @@
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="team.html">TEAM</a></li>
+        <li><a href="faq.html">FAQ</a></li>
       </ul>
+      <div class="header-actions">
+        <a href="auth/auth.html" class="login-btn">LOG IN</a>
+      </div>
     </div>
     <div style='height: 40px;'></div>
   </header>
 
   <main>
     <section class='hero-section'>
-      <div style='width: 50%; padding-bottom: 115px;'>
-        <div style='height: 40px'></div>
-        <h3 class='ready-when-you-are'>Ready when you are</h3>
-        <div class='slider'>
-          <div class='we-help-you'>We help move
-              <div class='text-box'>
-                  <span>Students</span>
-                  <span>Commuters</span>
-                  <span>Community</span>
-              </div>
+      <div class='hero-content'>
+        <h1 class='hero-main-title'>
+          The new way that 
+          <span class='hero-rotating-text'>
+            <div class='rotating-words'>
+              <span class='word'>Students</span>
+              <span class='word'>Elders</span>
+              <span class='word'>Coworkers</span>
+              <span class='word'>Americans</span>
+            </div>
+          </span> 
+          commute!
+        </h1>
+        
+        <p class='hero-description'>
+          Save money, reduce emissions, and build community through shared rides. 
+          RideSplits makes carpooling the smart choice for everyone.
+        </p>
+        
+        <div class='hero-stats'>
+          <div class='stat-item'>
+            <span class='stat-number'>2-3x</span>
+            <span class='stat-label'>More savings</span>
           </div>
+          <div class='stat-item'>
+            <span class='stat-number'>70%</span>
+            <span class='stat-label'>Driver earnings</span>
           </div>
-        <div style='height: 16px'></div>
-        <h1 class='hop-in'>Hop in. Crack a window. Let's get back out there.</h1>
-        <a href='javascript:void(0)' onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")' class='get-the-app'>Get the app</a>
-        <a href=about.html class='hero-business-button'>Learn about Ride Splits Business
-          <svg width='16' height='16' viewBox='0 0 16 16' style='margin-left: 8px'>
-            <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z"></path>
-          </svg>
-        </a>
+          <div class='stat-item'>
+            <span class='stat-number'>100%</span>
+            <span class='stat-label'>Community focused</span>
+          </div>
+        </div>
+        
+        <div class='hero-cta-buttons'>
+          <a href='javascript:void(0)' onclick='window.open("{{EXTERNAL_APP_URL}}", "_blank")' class='cta-primary cta-text-black'>Start Riding Today</a>
+          <a href='about.html' class='cta-secondary'>Learn How It Works
+            <svg width='16' height='16' viewBox='0 0 16 16' style='margin-left: 8px'>
+              <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z"></path>
+            </svg>
+          </a>
+        </div>
       </div>
-      <div style='width: 8.3333%; padding-right: 16px'></div>
-      <div style='width: 41.6667%'>
-        <div style='position: relative; height: 100%; width: 100%'>
-          <img src='./images/home_hero_1_tile.jpg' class='hero-img-1'>
-          <img src='./images/driver.png' class='driver-wearing-mask'>
+      
+      <div class='hero-visual'>
+        <div class='hero-image-container'>
+          <img src='./images/home_hero_1_tile.jpg' class='hero-main-image' alt='Community carpooling'>
+          <div class='hero-floating-card'>
+            <div class='card-icon'>👥</div>
+            <div class='card-text'>
+              <strong>Join the first</strong>
+              <span>community of carpoolers!</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -80,18 +113,9 @@
     <section class='driver-section'>
       <div class='driver-section-container'>
         <div style='width: 8.3333%; order: 1; padding-right: 16px'></div>
-        <div style='width: 33.3333%; order: 2'>
-          <img src='./images/driver_section_2x.jpg' class='driver-2'>
-        </div>
-        <div style='width: 8.3333%; order: 3; padding-right: 16px'></div>
-        <div style='width: 41.6667%; order: 4; padding-right: 16px; padding-top: 50px;'>
-          <div class='driver-section-info'>
-            <h3 class='drive-with-rs'>Drive With Ride Splits</h3>
-            <h1 class='set-your-own-hours'>Set your own hours. Earn on your own terms.</h1>
-            <p class='reason-to-drive'>Maybe you’re saving up for school. Or keeping flexible hours to spend more time
-              with your family. It’s a
-              great time to get in the driver’s seat, connect with your community, and earn a little extra cash. Plus,
-              you can tell people you’ve got the best boss in town: you.</p>
+        <div style='width: 41.6667%; order: 2; padding-right: 16px;'>
+          <img src='./images/driver.png' class='driver-2'>
+          <div style='display: flex; flex-direction: column; gap: 12px; margin-top: 16px;'>
             <div style='display: flex; flex-direction: row'>
               <span style='display: inline-block; margin-right: 8px'>
                 <svg style='width: 24px; height: 24px'>
@@ -101,8 +125,8 @@
                 </svg>
               </span>
               <div>
-                <strong>Reliable earnings</strong>
-                <p style='margin-top: 6px; margin-bottom: 24px;'>Make money and keep your tips.</p>
+                <strong>Fair earnings</strong>
+                <p style='margin-top: 6px; margin-bottom: 0;'>Keep what you make. Set your own price and keep your tips.</p>
               </div>
             </div>
             <div style='display: flex; flex-direction: row;'>
@@ -114,33 +138,37 @@
                 </svg>
               </span>
               <div>
-                <strong>A flexible schedule</strong>
-                <p style='margin-top: 6px; margin-bottom: 24px;'>Be your own boss and drive whenever it works for you.
-                </p>
+                <strong>Full flexibility</strong>
+                <p style='margin-top: 6px; margin-bottom: 0;'>Offer rides when it fits your schedule—no shifts, no pressure.</p>
               </div>
             </div>
             <div style='display: flex; flex-direction: row'>
               <span style='display: inline-block; margin-right: 8px'>
                 <svg style='width: 24px; height: 24px'>
                   <path
-                    d="M8.11 20.99c-.283-.105.059-.579.169-.746.407-.614.492-.72 1.28-2.21.72-1.365.488-3.328-.274-4.745-1.299-2.416-1.26-2.863.755-4.829.852-.832 4.959-4.824 5.363-5.219.201-.197.388-.274.501-.229 0 0 .259.035-.073.63-.307.548-.51.778-1.254 2.131-.743 1.352-.467 3.33.306 4.742 1.315 2.408 1.27 2.847-.722 4.834a511.714 511.714 0 0 1-4.765 4.645c-.186.178-1.088 1.108-1.287.997">
+                    d="M8.11 20.99c-.283-.105.059-.579.169-.746.407-.614.492-.72 1.28-2.21.72-1.365.488-3.328-.274-4.745-1.299-2.416-1.26-2.863.755-4.829.852-.832 4.959-4.824 5.363-5.219.201-.197.388-.274.501-.229 0 0 .259.035-.073.63-.307.548-.51.778-1.254 2.131-.743 1.352-.467 3.33.306 4.742 1.315 2.408 1.27 2.847-.722 4.834a511.714 511.714 0 0 1-4.765 4.645c-.186 .178-1.088 1.108-1.287 .997">
                   </path>
                 </svg>
               </span>
               <div>
-                <strong>Get paid promptly</strong>
-                <p style='margin-top: 6px'>Cash out your earnings whenever you want with Express Pay and Ride Splits Direct.
-                </p>
+                <strong>Fast payouts</strong>
+                <p style='margin-top: 6px; margin-bottom: 0;'>Get paid directly after each ride with Ride Splits Direct.</p>
               </div>
             </div>
-            <div style='display: flex; justify-content: center; flex-direction: row; margin-top: 40px; margin-bottom: 40px;'>
-              <!-- button links to be added later -->
-              <a href='' class='get-the-app-driver-section'>Apply to drive</a>
-              <a href='' class='driver-pay-container how-drive-pay-works-button'>
-                <strong style='padding-right: 8px'>How driver pay works</strong>
-                <svg width='16' height='16' viewBox='0 0 16 16'>
-                  <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z">
-                  </path>
+          </div>
+        </div>
+        <!-- Removed separate benefits block; grouped above under image -->
+        <div style='width: 6.6667%; order: 3; padding-right: 0'></div>
+        <div style='width: 41.6667%; order: 4; padding-right: 16px; padding-top: 50px;'>
+          <div class='driver-section-info'>
+            <h3 class='drive-with-rs'>DRIVE WITH RIDE SPLITS</h3>
+            <h1 class='set-your-own-hours'>Share your ride. Earn for going to your usual destinations.</h1>
+            <p class='reason-to-drive'>Already driving to class, work, or across town? With Ride Splits, you can turn your daily commute into extra cash while helping others save. Set your own price, choose who rides with you, and stay in control of your schedule. You’re not just driving—you’re building smarter, greener, and more affordable transportation for your community.</p>
+            <div style='display: flex; justify-content: flex-start; flex-direction: row; margin-top: 40px; margin-bottom: 40px; gap: 12px;'>
+              <a href='auth/auth.html' class='cta-primary cta-small'>Apply to drive</a>
+              <a href='driver-payment.html' class='cta-secondary cta-small'>How driver pay works
+                <svg width='16' height='16' viewBox='0 0 16 16' style='margin-left: 8px'>
+                  <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z"></path>
                 </svg>
               </a>
             </div>
@@ -236,7 +264,7 @@
             </div>
           <div class="">
             <div style='height: 40px;'></div>
-            <a href='javascript:void(0)' onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")' class='ride-section-button'>Schedule your ride in advance
+            <a href='javascript:void(0)' onclick='window.open("{{EXTERNAL_APP_URL}}", "_blank")' class='ride-section-button'>Schedule your ride in advance
               <svg width='16' height='16' viewBox='0 0 16 16' style='margin-left: 8px'>
                 <path d="M10.173 9.422H1V6.613h9.173L7.411 3.298 9.569 1.5 15 8.017l-5.431 6.517-2.158-1.798z"></path>
               </svg>
@@ -318,9 +346,10 @@
         <h2 class='ready-to-roll'>Ready to roll?<br>Get the Ride Splits app.</h2>
         <div class='ride-section3-searchbox-container '>
         </div>
-        <button class='ride-section3-get-estimate'><a href="javascript:void(0)" onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")'>Ride Splits</a></button>
+        <button class='ride-section3-get-estimate'><a href="javascript:void(0)" onclick='window.open("{{EXTERNAL_APP_URL}}", "_blank")'>Ride Splits</a></button>
       </div>
     </section>
+
 
 
   </main>
@@ -335,7 +364,7 @@
             <li class='navlinks-footer'><a href="https://www.tiktok.com/@ride_splits?_t=ZT-8vZgaa2KAvr&_r=1" title="ridesplit tiktok channel link" class='fa-brands fa-tiktok'></a></li>
           </div>
           <div class="footer-icons-right-group">
-            <li><a href="javascript:void(0)" onclick='window.open(window.RideSplitsConfig.appUrl, "_blank")'>Ride Splits App</a></li>
+            <li><a href="javascript:void(0)" onclick='window.open("{{EXTERNAL_APP_URL}}", "_blank")'>Ride Splits App</a></li>
             <li style='text-decoration: underline'><a href="terms.html">Terms</a></li>
             <li style='text-decoration: underline'><a href="privacy.html">Privacy</a></li>
             <li>&copy; 2025 Ride Splits, LLC</li>
@@ -346,39 +375,89 @@
   </footer>
 
   <!-- Configuration and Firebase SDK -->
-  <script src="config.js"></script>
+  
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
     
-    // Your web app's Firebase configuration
-    const firebaseConfig = window.RideSplitsConfig.firebase;
+          // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "{{FIREBASE_API_KEY_MAIN}}",
+        authDomain: "{{FIREBASE_AUTH_DOMAIN_MAIN}}",
+        projectId: "{{FIREBASE_PROJECT_ID_MAIN}}",
+        storageBucket: "{{FIREBASE_STORAGE_BUCKET_MAIN}}",
+        messagingSenderId: "{{FIREBASE_MESSAGING_SENDER_ID_MAIN}}",
+        appId: "{{FIREBASE_APP_ID_MAIN}}",
+        measurementId: "{{FIREBASE_MEASUREMENT_ID_MAIN}}"
+      };
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
     
-    // Make Firebase available globally for debugging
-    window.firebaseApp = app;
-    window.firebaseAnalytics = analytics;
+    // Firebase initialized (not exposed globally for security)
     
-    // Test Firebase connection
+    // Firebase initialized successfully
     console.log('🔥 Firebase initialized successfully!');
-    console.log('📊 Analytics enabled:', analytics ? 'YES' : 'NO');
-    console.log('🔑 Project ID:', app.options.projectId);
-    console.log('🌐 Domain:', app.options.authDomain);
     
     // Test analytics (this will actually send data to Firebase)
     try {
-      analytics.logEvent('page_view', {
-        page_title: document.title,
-        page_location: window.location.href
-      });
-      console.log('✅ Analytics event sent successfully!');
+      if (analytics && typeof analytics.logEvent === 'function') {
+        analytics.logEvent('page_view', {
+          page_title: document.title,
+          page_location: window.location.href
+        });
+        console.log('✅ Analytics event sent successfully!');
+      } else {
+        console.log('📊 Analytics available but logEvent method not found');
+      }
     } catch (error) {
-      console.error('❌ Analytics error:', error);
+      console.log('📊 Analytics error:', error.message);
     }
+  </script>
+  
+  <script>
+    // Initialize Google Maps Autocomplete for all search inputs using modern API
+    function initGoogleMapsAutocomplete() {
+      // Header search autocomplete
+      const headerSearchInput = document.querySelector('.nav-input-style');
+      if (headerSearchInput) {
+        const headerAutocomplete = new google.maps.places.Autocomplete(headerSearchInput, {
+          types: ['establishment', 'geocode'],
+          componentRestrictions: { country: 'us' }
+        });
+        
+        headerAutocomplete.addListener('place_changed', function() {
+          const place = headerAutocomplete.getPlace();
+          if (place.geometry) {
+            console.log('📍 Header location selected:', place.name);
+            // You can add more functionality here later
+          }
+        });
+      }
+      
+      // Ride booking section autocomplete
+      const rideInputs = document.querySelectorAll('.ride-section3-searchbox input');
+      rideInputs.forEach((input, index) => {
+        const autocomplete = new google.maps.places.Autocomplete(input, {
+          types: ['establishment', 'geocode'],
+          componentRestrictions: { country: 'us' }
+        });
+        
+        autocomplete.addListener('place_changed', function() {
+          const place = autocomplete.getPlace();
+          if (place.geometry) {
+            const inputType = index === 0 ? 'pick-up' : 'drop-off';
+            console.log(`📍 ${inputType} location selected:`, place.name);
+            // You can add more functionality here later
+          }
+        });
+      });
+    }
+    
+    // Initialize when page loads
+    window.addEventListener('load', initGoogleMapsAutocomplete);
   </script>
 </body>
 

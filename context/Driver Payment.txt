@@ -1,0 +1,19 @@
+RideSplits – How Driver Payment Works
+Earnings Breakdown
+Drivers keep 70% of the ride fare they set. Riders pay an additional 10% service fee at checkout.
+RideSplits takes the remaining portion as a platform fee.
+When You Get Paid
+Your ride earnings accumulate throughout the week. Payouts are sent every Friday to your linked bank
+account or debit card through Stripe. Your first payout may take longer while Stripe verifies your details,
+but after that, payouts are regular each Friday.
+How Payouts Work
+RideSplits uses Stripe to handle payouts securely: - Riders pay through Stripe (via card, Apple Pay, or
+Google Pay). - Stripe deposits your share into your Stripe Express account. - Funds are transferred
+automatically to your chosen bank account or debit card on Fridays.
+Changing Your Payout Method
+You can update your bank account or debit card anytime from the RideSplits app under Profile →
+Earnings. This will open your Stripe Express dashboard where you can manage payout details.
+Refunds and Disputes
+If a ride is refunded, RideSplits may adjust your balance. In the event of a dispute, RideSplits and
+Stripe review the issue. If a charge is reversed, funds may be deducted from your balance.
+
